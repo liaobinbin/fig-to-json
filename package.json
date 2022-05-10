@@ -1,14 +1,17 @@
 {
   "name": "fig-to-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert fig file to JSON format data",
   "main": "dist/FigToJSON.cjs.js",
   "module": "dist/FigtoJSON.esm-bundler.js",
   "browser": "dist/FigtoJSON.global.js",
   "scripts": {
     "build": "rm -rf dist && node scripts/build.js",
-    "dev": "node scripts/dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node scripts/dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liaobinbin/fig-to-json.git"
   },
   "keywords": ["fig", "json", "file"],
   "author": "Boiao Ch <doubiliao@gmail.com>",
