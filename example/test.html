@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Untitled</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+            your experience.
+            </p>
+        <![endif]-->
+
+        <input type="file" name="upload" id="upload"   />
+
+
+        <button onclick="testFile()">Test</button>
+
+        <script type="text/javascript" src="../dist/FigToJSON.global.js">
+
+
+        </script>
+        <script type="text/javascript">
+         const {getFigJsonData} =  FigToJSON;
+
+             const fileReader = new FileReader();
+
+  fileReader.addEventListener("load",(event)=>{
+    const arrayBuffer = event.target.result;
+             //...
+
+             console.log(arrayBuffer)
+             console.log(getFigJsonData(arrayBuffer))
+         })
+
+
+         function testFile(){
+             const file = document.getElementById('upload')
+             const fig = file.files[0]
+
+             fileReader.readAsArrayBuffer(fig);
+
+
+         }
+
+        </script>
+    </body>
+</html>
