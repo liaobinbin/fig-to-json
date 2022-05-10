@@ -1,6 +1,6 @@
 {
   "name": "fig-to-json",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "convert fig file to JSON format data",
   "main": "dist/FigToJSON.cjs.js",
   "module": "dist/FigtoJSON.esm-bundler.js",
@@ -13,19 +13,22 @@
     "type": "git",
     "url": "https://github.com/liaobinbin/fig-to-json.git"
   },
-  "keywords": ["fig", "json", "file"],
+  "keywords": [
+    "fig",
+    "json",
+    "file"
+  ],
   "author": "Boiao Ch <doubiliao@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "execa": "5.1.1",
     "rollup": "^2.72.1",
+    "rollup-plugin-cleanup": "^3.2.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
     "typescript": "^4.6.4"
-  },
-  "devDependencies": {
-    "rollup-plugin-cleanup": "^3.2.1"
   }
 }
