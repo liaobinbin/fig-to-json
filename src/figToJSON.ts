@@ -1,7 +1,5 @@
-import { ByteBuffer } from "./bb";
-import { decodeBinarySchema } from "./binary";
-import { compileSchema } from "./js";
-import UZIP from "./unzip";
+import { ByteBuffer, decodeBinarySchema, compileSchema } from "./lib/kiwi";
+import { inflateRaw } from "uzip";
 
 const transfer8to32 = function (
   fileByte: Uint8Array,
@@ -40,7 +38,7 @@ export const getFigJsonData = (fileBuffer: Buffer) => {
     let byteTemp = fileByte.slice(start, start + end);
 
     if (!(fileByte[start] == 137 && fileByte[start + 1] == 80)) {
-      byteTemp = UZIP.inflateRaw(byteTemp);
+      byteTemp = inflateRaw(byteTemp);
     }
 
     result.push(byteTemp);

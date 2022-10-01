@@ -20,7 +20,10 @@
   ],
   "author": "Boiao Ch <doubiliao@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@types/uzip": "^0.20201231.0",
+    "uzip": "^0.20201231.0"
+  },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
