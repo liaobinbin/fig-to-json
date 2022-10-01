@@ -1,6 +1,6 @@
 {
   "name": "fig-to-json",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "convert fig file to JSON format data",
   "main": "dist/FigToJSON.cjs.js",
   "module": "dist/FigtoJSON.esm-bundler.js",
